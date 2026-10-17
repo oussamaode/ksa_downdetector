@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSA Downdetector</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #161b26;
+            --border-color: #242b3d;
+            --accent-green: #10b981;
+            --accent-green-dark: #059669;
+            --status-online: #10b981;
+            --status-issue: #f59e0b;
+            --status-offline: #ef4444;
+        }
+        
+        html {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+        }
+        
+        html[lang="ar"] {
+            font-family: 'Cairo', 'Tahoma', 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-primary);
+            color: #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .bg-secondary {
+            background-color: var(--bg-secondary);
+        }
+        
+        .border-subtle {
+            border-color: var(--border-color);
+        }
+        
+        .accent-green {
+            color: var(--accent-green);
+        }
+        
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        }
+        
+        .status-dot.online {
+            background-color: var(--status-online);
+            box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+            animation: pulse-green 2s ease-in-out infinite;
+        }
+        
+        .status-dot.issue {
+            background-color: var(--status-issue);
+            box-shadow: 0 0 8px rgba(245, 158, 11, 0.8);
+        }
+        
+        .status-dot.offline {
+            background-color: var(--status-offline);
+            box-shadow: 0 0 8px rgba(239, 68, 68, 0.8);
+        }
+        
+        @keyframes pulse-green {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+            }
+            50% {
+                opacity: 0.6;
+                box-shadow: 0 0 12px rgba(16, 185, 129, 1);
+            }
+        }
+        
+        .card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .card:hover {
+            border-color: var(--accent-green);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .category-header {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        html[lang="ar"] .category-header {
+            text-transform: none;
+            font-size: 1rem;
+            letter-spacing: normal;
+        }
+        
+        .search-input {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 10px 14px;
+            color: #e5e7eb;
+            width: 100%;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+        
+        .search-input:focus {
+            border-color: var(--accent-green);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+        }
+        
+        .search-input::placeholder {
+            color: #6b7280;
+        }
+        
+        .lang-toggle {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 100;
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-green-dark) 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 24px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4);
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+        
+        html[lang="ar"] .lang-toggle {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .lang-toggle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+        }
+        
+        .lang-toggle:active {
+            transform: scale(0.98);
+        }
+        
+        html[lang="ar"] .lang-toggle {
+            right: auto;
+            left: 24px;
+        }
+        
+        .toast {
+            position: fixed;
+            bottom: 90px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background-color: rgba(16, 185, 129, 0.95);
+            color: #ffffff;
+            padding: 12px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            z-index: 200;
+            box-shadow: 0 4px 16px rgba(16, 185, 129, 0.5);
+        }
+        
+        html[lang="ar"] .toast {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+        
+        .toast.error {
+            background-color: rgba(239, 68, 68, 0.95);
+            box-shadow: 0 4px 16px rgba(239, 68, 68, 0.5);
+        }
+        
+        html[lang="ar"] .toast {
+            bottom: 90px;
+        }
+        
+        @media (max-width: 640px) {
+            .lang-toggle {
+                bottom: 16px;
+                right: 16px;
+                padding: 10px 18px;
+                font-size: 0.9rem;
+            }
+            
+            html[lang="ar"] .lang-toggle {
+                right: auto;
+                left: 16px;
+            }
+            
+            .toast {
+                bottom: 80px;
+                width: 90%;
+                text-align: center;
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="border-b border-subtle bg-secondary/50 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="text-center mb-6">
+                <h1 class="text-3xl sm:text-4xl font-bold mb-2" data-i18n="title">
+                    KSA Downdetector
+                </h1>
+                <p class="text-gray-400" data-i18n="subtitle">
+                    Real-time status monitoring for Saudi Arabian platforms
+                </p>
+            </div>
+            
+            <!-- Search -->
+            <div class="max-w-xl mx-auto">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    data-i18n-placeholder="searchPlaceholder"
+                    placeholder="Search platforms by name..."
+                    autocomplete="off"
+                >
+            </div>
+            
+            <!-- Summary Stats -->
+            <div class="flex justify-center gap-6 sm:gap-8 mt-6 flex-wrap">
+                <div class="flex items-center gap-2">
+                    <span class="status-dot online"></span>
+                    <span class="text-sm">
+                        <span class="accent-green font-semibold" id="onlineCount">0</span>
+                        <span data-i18n="statusOnline">ONLINE</span>
+                    </span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="status-dot issue"></span>
+                    <span class="text-sm">
+                        <span class="text-yellow-400 font-semibold" id="issueCount">0</span>
+                        <span data-i18n="statusIssue">ISSUE</span>
+                    </span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="status-dot offline"></span>
+                    <span class="text-sm">
+                        <span class="text-red-400 font-semibold" id="offlineCount">0</span>
+                        <span data-i18n="statusOffline">OFFLINE</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-32">
+        <div id="platformsContainer">
+            <!-- Platforms will be dynamically rendered here -->
+        </div>
+    </main>
+    
+    <!-- Language Toggle Button -->
+    <button id="langToggle" class="lang-toggle">
+        <span id="langToggleText">العربية</span>
+    </button>
+    
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" data-i18n="copied">Copied!</div>
+    
+    <script>
+        // Internationalization (i18n) data
+        const translations = {
+            en: {
+                title: "KSA Downdetector",
+                subtitle: "Real-time status monitoring for Saudi Arabian platforms",
+                searchPlaceholder: "Search platforms by name...",
+                statusOnline: "ONLINE",
+                statusIssue: "ISSUE",
+                statusOffline: "OFFLINE",
+                copied: "Copied!",
+                copyFailed: "Failed to copy",
+                noResults: "No platforms match your search",
+                lastUpdated: "Last updated",
+                responseTime: "Response time",
+                seconds: "s"
+            },
+            ar: {
+                title: "مراقب انقطاع خدمات السعودية",
+                subtitle: "مراقبة حالة المنصات السعودية في الوقت الفعلي",
+                searchPlaceholder: "ابحث عن منصة بالاسم...",
+                statusOnline: "متصل",
+                statusIssue: "مشكلة",
+                statusOffline: "غير متصل",
+                copied: "تم النسخ!",
+                copyFailed: "فشل النسخ",
+                noResults: "لا توجد منصات مطابقة لبحثك",
+                lastUpdated: "آخر تحديث",
+                responseTime: "وقت الاستجابة",
+                seconds: "ثانية"
+            }
+        };
+        
+        // Category translations
+        const categoryTranslations = {
+            en: {
+                gobierno_y_servicios: "Government & Services",
+                fintech_y_banca: "Fintech & Banking",
+                comercio_electronico: "E-Commerce",
+                delivery_y_transporte: "Delivery & Transportation",
+                telecomunicaciones: "Telecommunications",
+                plataformas_globales: "Global Platforms"
+            },
+            ar: {
+                gobierno_y_servicios: "الحكومة والخدمات",
+                fintech_y_banca: "التكنولوجيا المالية والبنوك",
+                comercio_electronico: "التجارة الإلكترونية",
+                delivery_y_transporte: "التوصيل والنقل",
+                telecomunicaciones: "الاتصالات",
+                plataformas_globales: "المنصات العالمية"
+            }
+        };
+        
+        let currentLang = 'en';
+        let platformsData = [];
+        let statusData = null;
+        
+        // Initialize the page
+        async function init() {
+            // Load both JSON files
+            try {
+                const [platformsRes, statusRes] = await Promise.all([
+                    fetch('plataformas_ksa.json'),
+                    fetch('status.json')
+                ]);
+                
+                platformsData = await platformsRes.json();
+                statusData = await statusRes.json();
+                
+                renderPlatforms();
+                updateStats();
+                
+                // Setup search
+                const searchInput = document.getElementById('searchInput');
+                searchInput.addEventListener('input', renderPlatforms);
+                
+                // Setup language toggle
+                const langToggle = document.getElementById('langToggle');
+                langToggle.addEventListener('click', toggleLanguage);
+                
+            } catch (error) {
+                console.error('Error loading data:', error);
+                const container = document.getElementById('platformsContainer');
+                container.innerHTML = `
+                    <div class="text-center py-12 text-gray-400">
+                        <p>Failed to load data files. Make sure 'plataformas_ksa.json' and 'status.json' are in the same directory.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Toggle language
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            const html = document.documentElement;
+            
+            if (currentLang === 'ar') {
+                html.setAttribute('dir', 'rtl');
+                html.setAttribute('lang', 'ar');
+                document.getElementById('langToggleText').textContent = 'English';
+            } else {
+                html.setAttribute('dir', 'ltr');
+                html.setAttribute('lang', 'en');
+                document.getElementById('langToggleText').textContent = 'العربية';
+            }
+            
+            // Update all translatable elements
+            updateTranslations();
+            renderPlatforms();
+        }
+        
+        // Update translations
+        function updateTranslations() {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.textContent = translations[currentLang][key];
+                }
+            });
+            
+            // Update placeholders
+            const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+            placeholders.forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[currentLang][key]) {
+                    el.setAttribute('placeholder', translations[currentLang][key]);
+                }
+            });
+        }
+        
+        // Update stats
+        function updateStats() {
+            if (!statusData) return;
+            
+            let online = 0, issue = 0, offline = 0;
+            
+            Object.values(statusData.platforms).forEach(p => {
+                if (p.status === 'ONLINE') online++;
+                else if (p.status === 'ISSUE') issue++;
+                else if (p.status === 'OFFLINE') offline++;
+            });
+            
+            document.getElementById('onlineCount').textContent = online;
+            document.getElementById('issueCount').textContent = issue;
+            document.getElementById('offlineCount').textContent = offline;
+        }
+        
+        // Render platforms
+        function renderPlatforms() {
+            const container = document.getElementById('platformsContainer');
+            const searchInput = document.getElementById('searchInput');
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            if (!platformsData.categorias) {
+                container.innerHTML = '';
+                return;
+            }
+            
+            let html = '';
+            const categorias = platformsData.categorias;
+            
+            for (const [categoryKey, platforms] of Object.entries(categorias)) {
+                // Filter platforms by search term
+                const filteredPlatforms = platforms.filter(p => {
+                    const nameEn = (p.nombre_en || '').toLowerCase();
+                    const nameAr = (p.nombre_ar || '').toLowerCase();
+                    return nameEn.includes(searchTerm) || nameAr.includes(searchTerm);
+                });
+                
+                if (filteredPlatforms.length === 0 && searchTerm) {
+                    continue;
+                }
+                
+                // Category header
+                const categoryName = categoryTranslations[currentLang][categoryKey] || categoryKey;
+                html += `
+                    <div class="mb-8 fade-in">
+                        <h2 class="category-header">${escapeHtml(categoryName)}</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                `;
+                
+                // Render each platform
+                filteredPlatforms.forEach(platform => {
+                    const status = statusData?.platforms?.[platform.id];
+                    const statusText = status ? status.status : 'OFFLINE';
+                    const responseTime = status ? status.response_time : null;
+                    
+                    const platformName = currentLang === 'ar' ? platform.nombre_ar : platform.nombre_en;
+                    
+                    let statusHtml = '';
+                    if (statusText === 'ONLINE') {
+                        statusHtml = `
+                            <div class="flex items-center gap-2 mt-2">
+                                <span class="status-dot online"></span>
+                                <span class="text-sm accent-green font-medium">${translations[currentLang].statusOnline}</span>
+                                ${responseTime !== null ? `
+                                    <span class="text-xs text-gray-400">
+                                        ${responseTime}s
+                                    </span>
+                                ` : ''}
+                            </div>
+                        `;
+                    } else if (statusText === 'ISSUE') {
+                        statusHtml = `
+                            <div class="flex items-center gap-2 mt-2">
+                                <span class="status-dot issue"></span>
+                                <span class="text-sm text-yellow-400 font-medium">${translations[currentLang].statusIssue}</span>
+                                ${responseTime !== null ? `
+                                    <span class="text-xs text-gray-400">
+                                        ${responseTime}s
+                                    </span>
+                                ` : ''}
+                            </div>
+                        `;
+                    } else {
+                        statusHtml = `
+                            <div class="flex items-center gap-2 mt-2">
+                                <span class="status-dot offline"></span>
+                                <span class="text-sm text-red-400 font-medium">${translations[currentLang].statusOffline}</span>
+                            </div>
+                        `;
+                    }
+                    
+                    html += `
+                        <div class="card" data-id="${escapeHtml(platform.id)}" onclick="copyToClipboard('${escapeHtml(platform.id)}')">
+                            <div class="font-medium text-sm sm:text-base break-words">
+                                ${escapeHtml(platformName)}
+                            </div>
+                            ${statusHtml}
+                            <div class="text-xs text-gray-500 mt-1 opacity-60">
+                                ID: ${escapeHtml(platform.id)}
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Check if no results
+            if (searchTerm && html === '') {
+                html = `
+                    <div class="text-center py-12 text-gray-400 fade-in">
+                        <p>${translations[currentLang].noResults}</p>
+                    </div>
+                `;
+            }
+            
+            container.innerHTML = html;
+        }
+        
+        // Copy to clipboard
+        async function copyToClipboard(id) {
+            try {
+                await navigator.clipboard.writeText(id);
+                showToast(translations[currentLang].copied, false);
+            } catch (error) {
+                showToast(translations[currentLang].copyFailed, true);
+            }
+        }
+        
+        // Show toast notification
+        function showToast(message, isError) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.remove('error');
+            if (isError) {
+                toast.classList.add('error');
+            }
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+        
+        // Escape HTML to prevent XSS
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-10-17T18:19:12.982995+00:00",
+  "total_platforms": 30,
+  "platforms": {
+    "gov_sa": {
+      "status": "OFFLINE",
+      "response_time": null
+    },
+    "snb": {
+      "status": "OFFLINE",
+      "response_time": null
+    },
+    "najiz": {
+      "status": "ONLINE",
+      "response_time": 0.442
+    },
+    "tamara": {
+      "status": "ONLINE",
+      "response_time": 0.496
+    },
+    "nafath": {
+      "status": "OFFLINE",
+      "response_time": null
+    },
+    "alrajhi": {
+      "status": "ONLINE",
+      "response_time": 1.022
+    },
+    "moe": {
+      "status": "ONLINE",
+      "response_time": 1.076
+    },
+    "salla": {
+      "status": "ONLINE",
+      "response_time": 0.696
+    },
+    "zid": {
+      "status": "ONLINE",
+      "response_time": 0.647
+    },
+    "tabby": {
+      "status": "ONLINE",
+      "response_time": 1.074
+    },
+    "absher": {
+      "status": "ONLINE",
+      "response_time": 1.634
+    },
+    "amazon_sa": {
+      "status": "ISSUE",
+      "response_time": 0.775
+    },
+    "jahez": {
+      "status": "ISSUE",
+      "response_time": 0.371
+    },
+    "haraj": {
+      "status": "ONLINE",
+      "response_time": 0.807
+    },
+    "hungerstation": {
+      "status": "ONLINE",
+      "response_time": 0.522
+    },
+    "mada": {
+      "status": "OFFLINE",
+      "response_time": null
+    },
+    "jarir": {
+      "status": "ONLINE",
+      "response_time": 1.185
+    },
+    "zain": {
+      "status": "ISSUE",
+      "response_time": 0.324
+    },
+    "nahdi": {
+      "status": "ONLINE",
+      "response_time": 1.319
+    },
+    "careem": {
+      "status": "ONLINE",
+      "response_time": 1.012
+    },
+    "x": {
+      "status": "ONLINE",
+      "response_time": 0.584
+    },
+    "linkedin": {
+      "status": "ONLINE",
+      "response_time": 0.47
+    },
+    "whatsapp": {
+      "status": "ONLINE",
+      "response_time": 1.121
+    },
+    "youtube": {
+      "status": "ONLINE",
+      "response_time": 1.282
+    },
+    "stc": {
+      "status": "ONLINE",
+      "response_time": 1.92
+    },
+    "google_sa": {
+      "status": "ONLINE",
+      "response_time": 1.593
+    },
+    "stc_pay": {
+      "status": "OFFLINE",
+      "response_time": null
+    },
+    "tawakkalna": {
+      "status": "ONLINE",
+      "response_time": 6.559
+    },
+    "noon": {
+      "status": "OFFLINE",
+      "response_time": null
+    },
+    "mobily": {
+      "status": "ONLINE",
+      "response_time": 12.631
+    }
+  }
+}

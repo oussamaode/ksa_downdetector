@@ -1,0 +1,49 @@
+{
+  "pais": "Saudi Arabia",
+  "codigo_iso": "KSA",
+  "ultima_actualizacion": "2026",
+  "categorias": {
+    "gobierno_y_servicios": [
+      {"id": "absher", "nombre_en": "Absher", "nombre_ar": "أبشر", "url": "https://absher.sa"},
+      {"id": "nafath", "nombre_en": "Nafath", "nombre_ar": "نفاذ", "url": "https://iam.gov.sa"},
+      {"id": "tawakkalna", "nombre_en": "Tawakkalna", "nombre_ar": "توكلنا", "url": "https://sdaia.gov.sa"},
+      {"id": "najiz", "nombre_en": "Najiz", "nombre_ar": "ناجز", "url": "https://najiz.sa"},
+      {"id": "moe", "nombre_en": "Ministry of Education", "nombre_ar": "وزارة التعليم", "url": "https://moe.gov.sa"},
+      {"id": "gov_sa", "nombre_en": "Unified National Platform", "nombre_ar": "المنصة الوطنية الموحدة", "url": "https://www.gov.sa"}
+    ],
+    "fintech_y_banca": [
+      {"id": "mada", "nombre_en": "mada", "nombre_ar": "مدى", "url": "https://mada.com.sa"},
+      {"id": "stc_pay", "nombre_en": "stc pay", "nombre_ar": "إس تي سي بي", "url": "https://stcpay.com.sa"},
+      {"id": "alrajhi", "nombre_en": "Al Rajhi Bank", "nombre_ar": "مصرف الراجحي", "url": "https://alrajhibank.com.sa"},
+      {"id": "snb", "nombre_en": "Saudi National Bank (SNB)", "nombre_ar": "البنك الأهلي السعودي", "url": "https://alahli.com"},
+      {"id": "tamara", "nombre_en": "Tamara", "nombre_ar": "تمارا", "url": "https://tamara.co"},
+      {"id": "tabby", "nombre_en": "Tabby", "nombre_ar": "تابي", "url": "https://tabby.ai"}
+    ],
+    "comercio_electronico": [
+      {"id": "salla", "nombre_en": "Salla", "nombre_ar": "سلة", "url": "https://salla.sa"},
+      {"id": "zid", "nombre_en": "Zid", "nombre_ar": "زيد", "url": "https://zid.sa"},
+      {"id": "amazon_sa", "nombre_en": "Amazon KSA", "nombre_ar": "أمازون السعودية", "url": "https://amazon.sa"},
+      {"id": "noon", "nombre_en": "Noon", "nombre_ar": "نون", "url": "https://noon.com"},
+      {"id": "haraj", "nombre_en": "Haraj", "nombre_ar": "حراج", "url": "https://haraj.com.sa"},
+      {"id": "jarir", "nombre_en": "Jarir Bookstore", "nombre_ar": "مكتبة جرير", "url": "https://jarir.com"},
+      {"id": "nahdi", "nombre_en": "Nahdi Online", "nombre_ar": "النهدي أونلاين", "url": "https://nahdionline.com"}
+    ],
+    "delivery_y_transporte": [
+      {"id": "jahez", "nombre_en": "Jahez", "nombre_ar": "جاهز", "url": "https://jahez.net"},
+      {"id": "hungerstation", "nombre_en": "HungerStation", "nombre_ar": "هنقرستيشن", "url": "https://hungerstation.com"},
+      {"id": "careem", "nombre_en": "Careem", "nombre_ar": "كريم", "url": "https://careem.com"}
+    ],
+    "telecomunicaciones": [
+      {"id": "stc", "nombre_en": "stc", "nombre_ar": "إس تي سي", "url": "https://stc.com.sa"},
+      {"id": "mobily", "nombre_en": "Mobily", "nombre_ar": "موبايلي", "url": "https://mobily.com.sa"},
+      {"id": "zain", "nombre_en": "Zain KSA", "nombre_ar": "زين السعودية", "url": "https://zain.com"}
+    ],
+    "plataformas_globales": [
+      {"id": "google_sa", "nombre_en": "Google KSA", "nombre_ar": "جوجل السعودية", "url": "https://google.com.sa"},
+      {"id": "youtube", "nombre_en": "YouTube", "nombre_ar": "يوتيوب", "url": "https://youtube.com"},
+      {"id": "x", "nombre_en": "X (Twitter)", "nombre_ar": "إكس", "url": "https://x.com"},
+      {"id": "whatsapp", "nombre_en": "WhatsApp", "nombre_ar": "واتساب", "url": "https://whatsapp.com"},
+      {"id": "linkedin", "nombre_en": "LinkedIn", "nombre_ar": "لينكد إن", "url": "https://www.linkedin.com"}
+    ]
+  }
+}
