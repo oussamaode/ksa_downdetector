@@ -4,46 +4,46 @@
   "ultima_actualizacion": "2026",
   "categorias": {
     "gobierno_y_servicios": [
-      {"id": "absher", "nombre_en": "Absher", "nombre_ar": "أبشر", "url": "https://absher.sa"},
-      {"id": "nafath", "nombre_en": "Nafath", "nombre_ar": "نفاذ", "url": "https://iam.gov.sa"},
-      {"id": "tawakkalna", "nombre_en": "Tawakkalna", "nombre_ar": "توكلنا", "url": "https://sdaia.gov.sa"},
-      {"id": "najiz", "nombre_en": "Najiz", "nombre_ar": "ناجز", "url": "https://najiz.sa"},
-      {"id": "moe", "nombre_en": "Ministry of Education", "nombre_ar": "وزارة التعليم", "url": "https://moe.gov.sa"},
-      {"id": "gov_sa", "nombre_en": "Unified National Platform", "nombre_ar": "المنصة الوطنية الموحدة", "url": "https://www.gov.sa"}
+      {"id": "absher", "nombre_en": "Absher", "nombre_ar": "أبشر", "url": "https://absher.sa", "logo_url": "https://strapi.wasmenia.com/uploads/Absher_384bcbee0a.svg"},
+      {"id": "nafath", "nombre_en": "Nafath", "nombre_ar": "نفاذ", "url": "https://iam.gov.sa", "logo_url": "https://strapi.wasmenia.com/uploads/Nafath_8bc94d2be1.svg"},
+      {"id": "tawakkalna", "nombre_en": "Tawakkalna", "nombre_ar": "توكلنا", "url": "https://sdaia.gov.sa", "logo_url": "https://strapi.wasmenia.com/uploads/Tawakkalna_928abd234f.svg"},
+      {"id": "najiz", "nombre_en": "Najiz", "nombre_ar": "ناجز", "url": "https://najiz.sa", "logo_url": "https://strapi.wasmenia.com/uploads/Najiz_8088131a5c.svg"},
+      {"id": "moe", "nombre_en": "Ministry of Education", "nombre_ar": "وزارة التعليم", "url": "https://moe.gov.sa", "logo_url": "https://strapi.wasmenia.com/uploads/Minisrty_of_Education_7bfec5b3df.svg"},
+      {"id": "gov_sa", "nombre_en": "Unified National Platform", "nombre_ar": "المنصة الوطنية الموحدة", "url": "https://www.gov.sa", "logo_url": "https://strapi.wasmenia.com/uploads/National_Portal_6b79ff4b93.svg"}
     ],
     "fintech_y_banca": [
-      {"id": "mada", "nombre_en": "mada", "nombre_ar": "مدى", "url": "https://mada.com.sa"},
-      {"id": "stc_pay", "nombre_en": "stc pay", "nombre_ar": "إس تي سي بي", "url": "https://stcpay.com.sa"},
-      {"id": "alrajhi", "nombre_en": "Al Rajhi Bank", "nombre_ar": "مصرف الراجحي", "url": "https://alrajhibank.com.sa"},
-      {"id": "snb", "nombre_en": "Saudi National Bank (SNB)", "nombre_ar": "البنك الأهلي السعودي", "url": "https://alahli.com"},
-      {"id": "tamara", "nombre_en": "Tamara", "nombre_ar": "تمارا", "url": "https://tamara.co"},
-      {"id": "tabby", "nombre_en": "Tabby", "nombre_ar": "تابي", "url": "https://tabby.ai"}
+      {"id": "mada", "nombre_en": "mada", "nombre_ar": "مدى", "url": "https://mada.com.sa", "logo_url": "https://strapi.wasmenia.com/uploads/Mada_01_b8a74be73c.svg"},
+      {"id": "stc_bank", "nombre_en": "stc bank", "nombre_ar": "إس تي سي بي", "url": "https://stcbank.com.sa/", "logo_url": "https://strapi.wasmenia.com/uploads/stc_bank_aa930c1f44.svg"},
+      {"id": "alrajhi", "nombre_en": "Al Rajhi Bank", "nombre_ar": "مصرف الراجحي", "url": "https://alrajhibank.com.sa", "logo_url": "https://strapi.wasmenia.com/uploads/Alrajhi_Bank_01_5c4a6ca81f.svg"},
+      {"id": "snb", "nombre_en": "Saudi National Bank (SNB)", "nombre_ar": "البنك الأهلي السعودي", "url": "https://alahli.com", "logo_url": "https://strapi.wasmenia.com/uploads/SNB_01_2cfff56fb7.svg"},
+      {"id": "tamara", "nombre_en": "Tamara", "nombre_ar": "تمارا", "url": "https://tamara.co", "logo_url": "https://strapi.wasmenia.com/uploads/Tamara_01_924ad82df7.svg"},
+      {"id": "tabby", "nombre_en": "Tabby", "nombre_ar": "تابي", "url": "https://tabby.ai", "logo_url": "https://strapi.wasmenia.com/uploads/Tabby_567def8d64.svg"}
     ],
     "comercio_electronico": [
-      {"id": "salla", "nombre_en": "Salla", "nombre_ar": "سلة", "url": "https://salla.sa"},
-      {"id": "zid", "nombre_en": "Zid", "nombre_ar": "زيد", "url": "https://zid.sa"},
-      {"id": "amazon_sa", "nombre_en": "Amazon KSA", "nombre_ar": "أمازون السعودية", "url": "https://amazon.sa"},
-      {"id": "noon", "nombre_en": "Noon", "nombre_ar": "نون", "url": "https://noon.com"},
-      {"id": "haraj", "nombre_en": "Haraj", "nombre_ar": "حراج", "url": "https://haraj.com.sa"},
-      {"id": "jarir", "nombre_en": "Jarir Bookstore", "nombre_ar": "مكتبة جرير", "url": "https://jarir.com"},
-      {"id": "nahdi", "nombre_en": "Nahdi Online", "nombre_ar": "النهدي أونلاين", "url": "https://nahdionline.com"}
+      {"id": "salla", "nombre_en": "Salla", "nombre_ar": "سلة", "url": "https://salla.sa", "logo_url": "https://strapi.wasmenia.com/uploads/Salla2_01_0de90e96fa.svg"},
+      {"id": "zid", "nombre_en": "Zid", "nombre_ar": "زيد", "url": "https://zid.sa", "logo_url": "https://strapi.wasmenia.com/uploads/Zid_En_01_11ef06ab07.svg"},
+      {"id": "amazon_sa", "nombre_en": "Amazon KSA", "nombre_ar": "أمازون السعودية", "url": "https://amazon.sa", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"},
+      {"id": "noon", "nombre_en": "Noon", "nombre_ar": "نون", "url": "https://noon.com", "logo_url": "https://strapi.wasmenia.com/uploads/noon_3cca529533.svg"},
+      {"id": "haraj", "nombre_en": "Haraj", "nombre_ar": "حراج", "url": "https://haraj.com.sa", "logo_url": "https://strapi.wasmenia.com/uploads/Haraj_6923daecf0.svg"},
+      {"id": "jarir", "nombre_en": "Jarir Bookstore", "nombre_ar": "مكتبة جرير", "url": "https://jarir.com", "logo_url": "https://strapi.wasmenia.com/uploads/Jarir_Bookstore_01_63eb827170.svg"},
+      {"id": "nahdi", "nombre_en": "Nahdi Online", "nombre_ar": "النهدي أونلاين", "url": "https://nahdionline.com", "logo_url": "https://strapi.wasmenia.com/uploads/Nahdi_01_c9950f492d.svg"}
     ],
     "delivery_y_transporte": [
-      {"id": "jahez", "nombre_en": "Jahez", "nombre_ar": "جاهز", "url": "https://jahez.net"},
-      {"id": "hungerstation", "nombre_en": "HungerStation", "nombre_ar": "هنقرستيشن", "url": "https://hungerstation.com"},
-      {"id": "careem", "nombre_en": "Careem", "nombre_ar": "كريم", "url": "https://careem.com"}
+      {"id": "jahez", "nombre_en": "Jahez", "nombre_ar": "جاهز", "url": "https://jahez.net", "logo_url": "https://strapi.wasmenia.com/uploads/Jahez_548cd84904.svg"},
+      {"id": "hungerstation", "nombre_en": "HungerStation", "nombre_ar": "هنقرستيشن", "url": "https://hungerstation.com", "logo_url": "https://strapi.wasmenia.com/uploads/Hunger_Station_531f86d2c4.svg"},
+      {"id": "careem", "nombre_en": "Careem", "nombre_ar": "كريم", "url": "https://careem.com", "logo_url": "https://strapi.wasmenia.com/uploads/Careem_abe004f4d8.svg"}
     ],
     "telecomunicaciones": [
-      {"id": "stc", "nombre_en": "stc", "nombre_ar": "إس تي سي", "url": "https://stc.com.sa"},
-      {"id": "mobily", "nombre_en": "Mobily", "nombre_ar": "موبايلي", "url": "https://mobily.com.sa"},
-      {"id": "zain", "nombre_en": "Zain KSA", "nombre_ar": "زين السعودية", "url": "https://zain.com"}
+      {"id": "stc", "nombre_en": "stc", "nombre_ar": "إس تي سي", "url": "https://stc.com.sa", "logo_url": "https://strapi.wasmenia.com/uploads/STC_01_6e708fd879.svg"},
+      {"id": "mobily", "nombre_en": "Mobily", "nombre_ar": "موبايلي", "url": "https://mobily.com.sa", "logo_url": "https://strapi.wasmenia.com/uploads/Mobily_01_898687dd2b.svg"},
+      {"id": "zain", "nombre_en": "Zain KSA", "nombre_ar": "زين السعودية", "url": "https://zain.com", "logo_url": "https://strapi.wasmenia.com/uploads/Zain_01_7b04825911.svg"}
     ],
     "plataformas_globales": [
-      {"id": "google_sa", "nombre_en": "Google KSA", "nombre_ar": "جوجل السعودية", "url": "https://google.com.sa"},
-      {"id": "youtube", "nombre_en": "YouTube", "nombre_ar": "يوتيوب", "url": "https://youtube.com"},
-      {"id": "x", "nombre_en": "X (Twitter)", "nombre_ar": "إكس", "url": "https://x.com"},
-      {"id": "whatsapp", "nombre_en": "WhatsApp", "nombre_ar": "واتساب", "url": "https://whatsapp.com"},
-      {"id": "linkedin", "nombre_en": "LinkedIn", "nombre_ar": "لينكد إن", "url": "https://www.linkedin.com"}
+      {"id": "google_sa", "nombre_en": "Google KSA", "nombre_ar": "جوجل السعودية", "url": "https://google.com.sa", "logo_url": "https://strapi.wasmenia.com/uploads/Google_28176d4507.svg"},
+      {"id": "youtube", "nombre_en": "YouTube", "nombre_ar": "يوتيوب", "url": "https://youtube.com", "logo_url": "https://strapi.wasmenia.com/uploads/Youtube_3e52e111b3.svg"},
+      {"id": "x", "nombre_en": "X (Twitter)", "nombre_ar": "إكس", "url": "https://x.com", "logo_url": "https://cdn.simpleicons.org/x/0F1419"},
+      {"id": "whatsapp", "nombre_en": "WhatsApp", "nombre_ar": "واتساب", "url": "https://whatsapp.com", "logo_url": "https://strapi.wasmenia.com/uploads/Whatsapp_01_2fcf11091b.svg"},
+      {"id": "linkedin", "nombre_en": "LinkedIn", "nombre_ar": "لينكد إن", "url": "https://www.linkedin.com", "logo_url": "https://strapi.wasmenia.com/uploads/Linked_In_d899607aaa.svg"}
     ]
   }
 }

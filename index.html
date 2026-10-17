@@ -105,6 +105,30 @@
             transform: translateY(-2px);
         }
         
+        .logo-tile {
+            background-color: #ffffff;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+        
+        .logo-tile img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+        
+        .logo-initials {
+            color: var(--accent-green);
+            font-weight: 700;
+            font-size: 0.95rem;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            font-family: 'Inter', 'Cairo', sans-serif;
+            user-select: none;
+        }
+        
         .category-header {
             color: #9ca3af;
             font-size: 0.875rem;
@@ -463,6 +487,44 @@
             document.getElementById('offlineCount').textContent = offline;
         }
         
+        // Build brand initials used as graceful logo fallback
+        function brandInitials(name) {
+            const clean = (name || '').trim();
+            if (!clean) return '??';
+            const words = clean.match(/[\p{L}\p{N}]+/gu) || [];
+            if (words.length === 0) return clean.slice(0, 2);
+            const first = words[0];
+            const significant = words.filter(w => w.length > 2 && w !== first);
+            if (significant.length === 0) return first.slice(0, 2).toUpperCase();
+            return (first.charAt(0) + significant[0].charAt(0)).toUpperCase();
+        }
+        
+        // Replace a broken / slow logo with styled brand initials
+        function logoFallback(img) {
+            const tile = img.parentElement;
+            if (!tile || tile.dataset.logoFallback === 'true') return;
+            tile.dataset.logoFallback = 'true';
+            const initials = img.dataset.initials || brandInitials(img.alt);
+            const span = document.createElement('span');
+            span.className = 'logo-initials';
+            span.textContent = initials;
+            tile.innerHTML = '';
+            tile.appendChild(span);
+        }
+        
+        // Guarantee every logo either renders or falls back within LOGO_TIMEOUT
+        const LOGO_TIMEOUT = 6000;
+        function armLogoTimeouts(scope) {
+            scope.querySelectorAll('img[data-initials]').forEach(img => {
+                const timer = setTimeout(() => {
+                    if (!img.isConnected) return;
+                    if (!img.complete || img.naturalWidth === 0) logoFallback(img);
+                }, LOGO_TIMEOUT);
+                img.addEventListener('load', () => clearTimeout(timer), { once: true });
+                img.addEventListener('error', () => clearTimeout(timer), { once: true });
+            });
+        }
+        
         // Render platforms
         function renderPlatforms() {
             const container = document.getElementById('platformsContainer');
@@ -539,8 +601,17 @@
                         `;
                     }
                     
+                    const logoUrl = platform.logo_url || '';
+                    const initials = brandInitials(platformName);
+                    const logoHtml = logoUrl
+                        ? `<img src="${escapeHtml(logoUrl)}" alt="${escapeHtml(platformName)}" loading="lazy" decoding="async" data-initials="${escapeHtml(initials)}" onerror="logoFallback(this)">`
+                        : `<span class="logo-initials">${escapeHtml(initials)}</span>`;
+                    
                     html += `
                         <div class="card" data-id="${escapeHtml(platform.id)}" onclick="copyToClipboard('${escapeHtml(platform.id)}')">
+                            <div class="logo-tile w-12 h-12 rounded-xl bg-white flex items-center justify-center p-2 mb-4">
+                                ${logoHtml}
+                            </div>
                             <div class="font-medium text-sm sm:text-base break-words">
                                 ${escapeHtml(platformName)}
                             </div>
@@ -568,6 +639,7 @@
             }
             
             container.innerHTML = html;
+            armLogoTimeouts(container);
         }
         
         // Copy to clipboard
