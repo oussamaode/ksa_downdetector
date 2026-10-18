@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 import json
+import ssl
 import time
+import warnings
 from datetime import datetime, timezone
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.exceptions import InsecureRequestWarning
+from urllib3.util.ssl_ import create_urllib3_context
 from requests.exceptions import (
     RequestException,
     ConnectionError,
@@ -13,6 +18,8 @@ from requests.exceptions import (
     HTTPError,
     TooManyRedirects,
 )
+
+warnings.simplefilter("ignore", InsecureRequestWarning)
 
 # User-Agent realista que simula un navegador moderno para evitar bloqueos
 HEADERS = {
@@ -30,7 +37,32 @@ HEADERS = {
     "Cache-Control": "max-age=0",
 }
 
-TIMEOUT_SECONDS = 6.0
+TIMEOUT_SECONDS = 10.0
+
+# Codigos que indican proteccion anti-bot: el servidor responde, no esta caido
+ANTI_BOT_CODES = {401, 403, 405, 429, 999}
+
+
+class TLSAdapter(HTTPAdapter):
+    """
+    Adaptador TLS para sitios con cadena de certificados incompleta
+    o suites cifradas que OpenSSL 3 rechaza por defecto (ej. alahli.com).
+    """
+
+    def init_poolmanager(self, *args, **kwargs):
+        context = create_urllib3_context()
+        context.set_ciphers("DEFAULT@SECLEVEL=1")
+        context.check_hostname = False
+        context.verify_mode = ssl.CERT_NONE
+        kwargs["ssl_context"] = context
+        return super().init_poolmanager(*args, **kwargs)
+
+
+def build_session(verify_ssl: bool) -> requests.Session:
+    session = requests.Session()
+    if not verify_ssl:
+        session.mount("https://", TLSAdapter())
+    return session
 
 
 def check_platform(platform: Dict[str, Any]) -> Dict[str, Any]:
@@ -39,6 +71,7 @@ def check_platform(platform: Dict[str, Any]) -> Dict[str, Any]:
     
     Args:
         platform: Diccionario con los campos 'id', 'nombre_en', 'nombre_ar', 'url'
+                  y opcionalmente 'verify_ssl' (default True)
     
     Returns:
         Diccionario con 'id', 'nombre_en', 'nombre_ar', 'url', 'status', 'response_time'
@@ -47,6 +80,7 @@ def check_platform(platform: Dict[str, Any]) -> Dict[str, Any]:
     nombre_en = platform.get("nombre_en", "")
     nombre_ar = platform.get("nombre_ar", "")
     url = platform.get("url", "")
+    verify_ssl = platform.get("verify_ssl", True)
     
     result = {
         "id": platform_id,
@@ -57,19 +91,45 @@ def check_platform(platform: Dict[str, Any]) -> Dict[str, Any]:
         "response_time": None,
     }
     
+    session = build_session(verify_ssl)
+    
     try:
         start_time = time.perf_counter()
-        response = requests.get(
-            url,
-            headers=HEADERS,
-            timeout=TIMEOUT_SECONDS,
-            allow_redirects=True,
-        )
+        last_error: Optional[Exception] = None
+        response = None
+        
+        # Hasta 2 intentos: algunos sitios cierran la conexion de forma intermitente
+        for attempt in range(2):
+            try:
+                response = session.get(
+                    url,
+                    headers=HEADERS,
+                    timeout=TIMEOUT_SECONDS,
+                    allow_redirects=True,
+                    verify=verify_ssl,
+                )
+                break
+            except (ConnectionError, Timeout) as e:
+                last_error = e
+                if attempt == 0:
+                    time.sleep(1.0)
+        
+        if response is None:
+            raise last_error if last_error else RequestException("Sin respuesta")
+        
         elapsed_time = time.perf_counter() - start_time
         response_time = round(elapsed_time, 3)
         
-        # Clasifica según el código de estado
-        if response.status_code == 200:
+        # Clasifica segun el codigo de estado
+        if 200 <= response.status_code < 300:
+            result["status"] = "ONLINE"
+            result["response_time"] = response_time
+        elif 300 <= response.status_code < 400:
+            # Redirigio sin destino claro: el servidor responde, no esta caido
+            result["status"] = "ONLINE"
+            result["response_time"] = response_time
+        elif response.status_code in ANTI_BOT_CODES:
+            # El servidor responde pero bloquea bots: sigue en pie
             result["status"] = "ONLINE"
             result["response_time"] = response_time
         else:
@@ -88,6 +148,8 @@ def check_platform(platform: Dict[str, Any]) -> Dict[str, Any]:
         # Excepciones inesperadas para garantizar que el script nunca falle
         result["status"] = "OFFLINE"
         result["response_time"] = None
+    finally:
+        session.close()
     
     return result
 
