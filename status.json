@@ -1,118 +1,118 @@
 {
-  "timestamp": "2026-10-18T07:24:55.153496+00:00",
+  "timestamp": "2026-10-18T10:40:17.199985+00:00",
   "total_platforms": 29,
   "platforms": {
-    "gov_sa": {
-      "status": "ONLINE",
-      "response_time": 1.868
-    },
-    "snb": {
-      "status": "ONLINE",
-      "response_time": 2.044
-    },
     "tamara": {
       "status": "ONLINE",
-      "response_time": 2.31
+      "response_time": 0.236
     },
-    "stc_bank": {
+    "gov_sa": {
       "status": "ONLINE",
-      "response_time": 3.448
-    },
-    "tabby": {
-      "status": "ONLINE",
-      "response_time": 1.671
-    },
-    "alrajhi": {
-      "status": "ONLINE",
-      "response_time": 3.57
+      "response_time": 0.277
     },
     "salla": {
       "status": "ONLINE",
-      "response_time": 1.528
+      "response_time": 0.142
     },
-    "tawakkalna": {
+    "tabby": {
       "status": "ONLINE",
-      "response_time": 3.752
-    },
-    "moe": {
-      "status": "ONLINE",
-      "response_time": 3.925
+      "response_time": 0.777
     },
     "zid": {
       "status": "ONLINE",
-      "response_time": 1.653
+      "response_time": 1.0
     },
-    "najiz": {
+    "tawakkalna": {
       "status": "ONLINE",
-      "response_time": 4.167
-    },
-    "jahez": {
-      "status": "ONLINE",
-      "response_time": 2.153
-    },
-    "absher": {
-      "status": "ONLINE",
-      "response_time": 6.126
-    },
-    "hungerstation": {
-      "status": "ONLINE",
-      "response_time": 2.172
-    },
-    "jarir": {
-      "status": "ONLINE",
-      "response_time": 3.248
-    },
-    "haraj": {
-      "status": "ONLINE",
-      "response_time": 3.951
-    },
-    "nafath": {
-      "status": "OFFLINE",
-      "response_time": null
+      "response_time": 1.441
     },
     "amazon_sa": {
       "status": "ONLINE",
-      "response_time": 5.169
+      "response_time": 0.911
     },
-    "nahdi": {
+    "alrajhi": {
       "status": "ONLINE",
-      "response_time": 4.926
+      "response_time": 1.992
+    },
+    "absher": {
+      "status": "ONLINE",
+      "response_time": 2.14
+    },
+    "haraj": {
+      "status": "ONLINE",
+      "response_time": 0.705
+    },
+    "hungerstation": {
+      "status": "ONLINE",
+      "response_time": 0.114
+    },
+    "stc_bank": {
+      "status": "ONLINE",
+      "response_time": 2.264
+    },
+    "jarir": {
+      "status": "ONLINE",
+      "response_time": 0.341
+    },
+    "jahez": {
+      "status": "ONLINE",
+      "response_time": 0.608
     },
     "careem": {
       "status": "ONLINE",
-      "response_time": 4.581
+      "response_time": 0.539
     },
-    "zain": {
+    "snb": {
       "status": "ONLINE",
-      "response_time": 3.104
+      "response_time": 2.867
     },
-    "stc": {
+    "nahdi": {
       "status": "ONLINE",
-      "response_time": 4.42
+      "response_time": 0.897
     },
-    "linkedin": {
+    "najiz": {
       "status": "ONLINE",
-      "response_time": 1.884
-    },
-    "google_sa": {
-      "status": "ONLINE",
-      "response_time": 4.157
-    },
-    "youtube": {
-      "status": "ONLINE",
-      "response_time": 4.387
+      "response_time": 2.94
     },
     "x": {
       "status": "ONLINE",
-      "response_time": 3.921
+      "response_time": 0.17
+    },
+    "stc": {
+      "status": "ISSUE",
+      "response_time": 0.891
+    },
+    "zain": {
+      "status": "ONLINE",
+      "response_time": 0.447
+    },
+    "google_sa": {
+      "status": "ONLINE",
+      "response_time": 0.427
+    },
+    "youtube": {
+      "status": "ONLINE",
+      "response_time": 0.376
+    },
+    "linkedin": {
+      "status": "ONLINE",
+      "response_time": 0.31
     },
     "whatsapp": {
       "status": "ONLINE",
-      "response_time": 5.676
+      "response_time": 0.707
     },
     "mobily": {
+      "status": "ISSUE",
+      "response_time": 1.545
+    },
+    "nafath": {
       "status": "ONLINE",
-      "response_time": 11.775
+      "response_time": 3.905
+    },
+    "moe": {
+      "status": "ONLINE",
+      "response_time": 3.968
     },
     "noon": {
       "status": "OFFLINE",
