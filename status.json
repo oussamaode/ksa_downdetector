@@ -1,120 +1,120 @@
 {
-  "timestamp": "2026-10-20T22:33:18.305928+00:00",
+  "timestamp": "2026-10-21T00:55:49.487052+00:00",
   "total_platforms": 29,
   "platforms": {
-    "tamara": {
-      "status": "ONLINE",
-      "response_time": 0.243
-    },
     "gov_sa": {
       "status": "ONLINE",
-      "response_time": 0.462
+      "response_time": 0.144
+    },
+    "tamara": {
+      "status": "ONLINE",
+      "response_time": 0.199
     },
     "salla": {
       "status": "ONLINE",
-      "response_time": 0.139
+      "response_time": 0.127
     },
     "tabby": {
       "status": "ONLINE",
-      "response_time": 0.855
+      "response_time": 0.683
     },
     "zid": {
       "status": "ONLINE",
-      "response_time": 0.913
+      "response_time": 0.985
     },
     "tawakkalna": {
       "status": "ONLINE",
-      "response_time": 1.52
+      "response_time": 1.816
     },
     "amazon_sa": {
       "status": "ONLINE",
-      "response_time": 0.878
-    },
-    "alrajhi": {
-      "status": "ONLINE",
-      "response_time": 2.021
-    },
-    "absher": {
-      "status": "ONLINE",
-      "response_time": 2.137
+      "response_time": 1.076
     },
     "haraj": {
       "status": "ONLINE",
-      "response_time": 0.676
-    },
-    "hungerstation": {
-      "status": "ONLINE",
-      "response_time": 0.118
+      "response_time": 0.849
     },
     "jarir": {
       "status": "ONLINE",
-      "response_time": 0.456
+      "response_time": 0.777
+    },
+    "alrajhi": {
+      "status": "ONLINE",
+      "response_time": 2.765
     },
     "najiz": {
       "status": "ONLINE",
-      "response_time": 2.64
+      "response_time": 2.892
+    },
+    "hungerstation": {
+      "status": "ONLINE",
+      "response_time": 0.15
+    },
+    "absher": {
+      "status": "ONLINE",
+      "response_time": 2.965
     },
     "jahez": {
       "status": "ONLINE",
-      "response_time": 0.581
-    },
-    "stc_bank": {
-      "status": "ONLINE",
-      "response_time": 2.818
+      "response_time": 0.747
     },
     "careem": {
       "status": "ONLINE",
-      "response_time": 0.595
-    },
-    "nahdi": {
-      "status": "ONLINE",
-      "response_time": 0.921
-    },
-    "x": {
-      "status": "ONLINE",
-      "response_time": 0.163
-    },
-    "zain": {
-      "status": "ONLINE",
-      "response_time": 0.441
-    },
-    "youtube": {
-      "status": "ONLINE",
-      "response_time": 0.432
-    },
-    "linkedin": {
-      "status": "ONLINE",
-      "response_time": 0.239
-    },
-    "google_sa": {
-      "status": "ONLINE",
-      "response_time": 0.617
-    },
-    "nafath": {
-      "status": "ONLINE",
-      "response_time": 3.474
-    },
-    "whatsapp": {
-      "status": "ONLINE",
-      "response_time": 0.611
+      "response_time": 0.557
     },
     "snb": {
       "status": "ONLINE",
-      "response_time": 3.887
+      "response_time": 3.698
+    },
+    "google_sa": {
+      "status": "ONLINE",
+      "response_time": 0.329
+    },
+    "zain": {
+      "status": "ONLINE",
+      "response_time": 0.448
+    },
+    "x": {
+      "status": "ONLINE",
+      "response_time": 0.159
+    },
+    "nahdi": {
+      "status": "ONLINE",
+      "response_time": 1.307
+    },
+    "youtube": {
+      "status": "ONLINE",
+      "response_time": 0.479
+    },
+    "stc_bank": {
+      "status": "ONLINE",
+      "response_time": 4.215
+    },
+    "linkedin": {
+      "status": "ONLINE",
+      "response_time": 0.279
+    },
+    "whatsapp": {
+      "status": "ONLINE",
+      "response_time": 0.494
     },
     "stc": {
       "status": "ONLINE",
-      "response_time": 1.523
+      "response_time": 1.749
     },
     "moe": {
       "status": "ONLINE",
-      "response_time": 3.969
+      "response_time": 4.764
     },
-    "noon": {
-      "status": "OFFLINE",
-      "response_time": null
+    "nafath": {
+      "status": "ONLINE",
+      "response_time": 5.194
     },
     "mobily": {
+      "status": "ONLINE",
+      "response_time": 2.902
+    },
+    "noon": {
       "status": "OFFLINE",
       "response_time": null
     }
