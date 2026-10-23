@@ -1,114 +1,114 @@
 {
-  "timestamp": "2026-10-23T02:01:12.204060+00:00",
+  "timestamp": "2026-10-23T07:25:55.382040+00:00",
   "total_platforms": 29,
   "platforms": {
     "tamara": {
       "status": "ONLINE",
-      "response_time": 0.174
+      "response_time": 0.182
     },
     "gov_sa": {
       "status": "ONLINE",
-      "response_time": 0.245
+      "response_time": 0.61
     },
     "salla": {
       "status": "ONLINE",
-      "response_time": 0.106
-    },
-    "tabby": {
-      "status": "ONLINE",
-      "response_time": 0.722
-    },
-    "zid": {
-      "status": "ONLINE",
-      "response_time": 0.643
-    },
-    "amazon_sa": {
-      "status": "ONLINE",
-      "response_time": 0.726
+      "response_time": 0.141
     },
     "tawakkalna": {
       "status": "ONLINE",
-      "response_time": 1.682
+      "response_time": 1.902
     },
-    "stc_bank": {
+    "zid": {
       "status": "ONLINE",
-      "response_time": 1.943
-    },
-    "jarir": {
-      "status": "ONLINE",
-      "response_time": 0.293
+      "response_time": 1.229
     },
     "alrajhi": {
       "status": "ONLINE",
-      "response_time": 2.19
-    },
-    "hungerstation": {
-      "status": "ONLINE",
-      "response_time": 0.127
-    },
-    "haraj": {
-      "status": "ONLINE",
-      "response_time": 0.693
-    },
-    "absher": {
-      "status": "ONLINE",
-      "response_time": 2.444
-    },
-    "jahez": {
-      "status": "ONLINE",
-      "response_time": 0.487
-    },
-    "careem": {
-      "status": "ONLINE",
-      "response_time": 0.418
-    },
-    "zain": {
-      "status": "ONLINE",
-      "response_time": 0.373
-    },
-    "nahdi": {
-      "status": "ONLINE",
-      "response_time": 0.966
-    },
-    "x": {
-      "status": "ONLINE",
-      "response_time": 0.134
-    },
-    "youtube": {
-      "status": "ONLINE",
-      "response_time": 0.363
-    },
-    "google_sa": {
-      "status": "ONLINE",
-      "response_time": 0.592
-    },
-    "linkedin": {
-      "status": "ONLINE",
-      "response_time": 0.237
-    },
-    "snb": {
-      "status": "ONLINE",
-      "response_time": 3.451
-    },
-    "whatsapp": {
-      "status": "ONLINE",
-      "response_time": 0.435
+      "response_time": 2.181
     },
     "najiz": {
       "status": "ONLINE",
-      "response_time": 3.73
+      "response_time": 2.501
+    },
+    "stc_bank": {
+      "status": "ONLINE",
+      "response_time": 2.555
+    },
+    "amazon_sa": {
+      "status": "ONLINE",
+      "response_time": 0.769
+    },
+    "absher": {
+      "status": "ONLINE",
+      "response_time": 2.702
+    },
+    "hungerstation": {
+      "status": "ONLINE",
+      "response_time": 0.155
+    },
+    "jarir": {
+      "status": "ONLINE",
+      "response_time": 0.398
+    },
+    "careem": {
+      "status": "ONLINE",
+      "response_time": 0.521
+    },
+    "jahez": {
+      "status": "ONLINE",
+      "response_time": 0.727
+    },
+    "haraj": {
+      "status": "ONLINE",
+      "response_time": 1.331
+    },
+    "nahdi": {
+      "status": "ONLINE",
+      "response_time": 1.209
+    },
+    "zain": {
+      "status": "ONLINE",
+      "response_time": 0.45
+    },
+    "snb": {
+      "status": "ONLINE",
+      "response_time": 3.85
+    },
+    "x": {
+      "status": "ONLINE",
+      "response_time": 0.147
     },
     "stc": {
       "status": "ONLINE",
-      "response_time": 1.661
+      "response_time": 1.249
+    },
+    "youtube": {
+      "status": "ONLINE",
+      "response_time": 0.414
+    },
+    "google_sa": {
+      "status": "ONLINE",
+      "response_time": 0.675
+    },
+    "linkedin": {
+      "status": "ONLINE",
+      "response_time": 0.257
+    },
+    "whatsapp": {
+      "status": "ONLINE",
+      "response_time": 0.548
     },
     "moe": {
       "status": "ONLINE",
-      "response_time": 4.815
+      "response_time": 5.559
     },
     "mobily": {
       "status": "ONLINE",
-      "response_time": 2.691
+      "response_time": 3.075
+    },
+    "tabby": {
+      "status": "ONLINE",
+      "response_time": 8.485
     },
     "nafath": {
       "status": "OFFLINE",
