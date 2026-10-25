@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-10-25T12:06:10.439014+00:00",
+  "timestamp": "2026-10-25T16:11:36.878433+00:00",
   "total_platforms": 29,
   "platforms": {
     "tamara": {
       "status": "ONLINE",
-      "response_time": 0.171
+      "response_time": 0.134
     },
     "gov_sa": {
       "status": "ONLINE",
@@ -12,103 +12,103 @@
     },
     "salla": {
       "status": "ONLINE",
-      "response_time": 0.116
+      "response_time": 0.072
     },
     "tabby": {
       "status": "ONLINE",
-      "response_time": 0.666
+      "response_time": 0.843
     },
     "zid": {
       "status": "ONLINE",
-      "response_time": 1.292
-    },
-    "amazon_sa": {
-      "status": "ONLINE",
-      "response_time": 1.111
+      "response_time": 1.382
     },
     "tawakkalna": {
       "status": "ONLINE",
-      "response_time": 2.047
+      "response_time": 1.775
+    },
+    "amazon_sa": {
+      "status": "ONLINE",
+      "response_time": 0.948
     },
     "jarir": {
       "status": "ONLINE",
-      "response_time": 0.337
-    },
-    "absher": {
-      "status": "ONLINE",
-      "response_time": 2.777
-    },
-    "najiz": {
-      "status": "ONLINE",
-      "response_time": 3.131
-    },
-    "hungerstation": {
-      "status": "ONLINE",
-      "response_time": 0.138
-    },
-    "alrajhi": {
-      "status": "ONLINE",
-      "response_time": 3.303
-    },
-    "jahez": {
-      "status": "ONLINE",
-      "response_time": 0.727
-    },
-    "nahdi": {
-      "status": "ONLINE",
-      "response_time": 1.213
-    },
-    "stc_bank": {
-      "status": "ONLINE",
-      "response_time": 3.717
-    },
-    "careem": {
-      "status": "ONLINE",
-      "response_time": 0.52
-    },
-    "zain": {
-      "status": "ONLINE",
-      "response_time": 0.468
-    },
-    "youtube": {
-      "status": "ONLINE",
-      "response_time": 0.395
-    },
-    "x": {
-      "status": "ONLINE",
-      "response_time": 0.142
-    },
-    "google_sa": {
-      "status": "ONLINE",
-      "response_time": 0.526
+      "response_time": 0.298
     },
     "haraj": {
       "status": "ONLINE",
-      "response_time": 2.572
+      "response_time": 0.868
     },
-    "linkedin": {
+    "alrajhi": {
       "status": "ONLINE",
-      "response_time": 0.318
+      "response_time": 2.749
     },
-    "whatsapp": {
+    "stc_bank": {
       "status": "ONLINE",
-      "response_time": 0.393
+      "response_time": 2.78
     },
-    "moe": {
+    "hungerstation": {
       "status": "ONLINE",
-      "response_time": 4.583
+      "response_time": 0.1
     },
-    "stc": {
+    "absher": {
       "status": "ONLINE",
-      "response_time": 1.387
+      "response_time": 3.029
     },
-    "mobily": {
+    "najiz": {
       "status": "ONLINE",
-      "response_time": 2.787
+      "response_time": 3.281
+    },
+    "careem": {
+      "status": "ONLINE",
+      "response_time": 0.528
+    },
+    "jahez": {
+      "status": "ONLINE",
+      "response_time": 0.72
+    },
+    "nahdi": {
+      "status": "ONLINE",
+      "response_time": 1.195
+    },
+    "zain": {
+      "status": "ONLINE",
+      "response_time": 0.381
+    },
+    "youtube": {
+      "status": "ONLINE",
+      "response_time": 0.44
     },
     "snb": {
       "status": "ONLINE",
-      "response_time": 7.074
+      "response_time": 3.983
+    },
+    "google_sa": {
+      "status": "ONLINE",
+      "response_time": 0.782
+    },
+    "linkedin": {
+      "status": "ONLINE",
+      "response_time": 0.292
+    },
+    "x": {
+      "status": "ONLINE",
+      "response_time": 0.696
+    },
+    "stc": {
+      "status": "ONLINE",
+      "response_time": 1.53
+    },
+    "whatsapp": {
+      "status": "ONLINE",
+      "response_time": 0.997
+    },
+    "moe": {
+      "status": "ONLINE",
+      "response_time": 4.679
+    },
+    "mobily": {
+      "status": "ONLINE",
+      "response_time": 3.592
     },
     "nafath": {
       "status": "OFFLINE",
