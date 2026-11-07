@@ -1,120 +1,120 @@
 {
-  "timestamp": "2026-11-07T07:19:04.295684+00:00",
+  "timestamp": "2026-11-07T14:13:22.762147+00:00",
   "total_platforms": 29,
   "platforms": {
     "tamara": {
       "status": "ONLINE",
-      "response_time": 0.122
+      "response_time": 0.092
     },
     "gov_sa": {
       "status": "ONLINE",
-      "response_time": 0.213
+      "response_time": 0.693
     },
     "salla": {
       "status": "ONLINE",
-      "response_time": 0.091
+      "response_time": 0.185
     },
     "tabby": {
       "status": "ONLINE",
-      "response_time": 0.474
-    },
-    "zid": {
-      "status": "ONLINE",
-      "response_time": 0.411
+      "response_time": 0.954
     },
     "tawakkalna": {
       "status": "ONLINE",
-      "response_time": 1.298
+      "response_time": 2.625
     },
-    "amazon_sa": {
+    "zid": {
       "status": "ONLINE",
-      "response_time": 0.717
+      "response_time": 1.745
     },
-    "jarir": {
+    "noon": {
       "status": "ONLINE",
-      "response_time": 0.248
-    },
-    "moe": {
-      "status": "ONLINE",
-      "response_time": 1.589
-    },
-    "alrajhi": {
-      "status": "ONLINE",
-      "response_time": 1.792
-    },
-    "hungerstation": {
-      "status": "ONLINE",
-      "response_time": 0.124
-    },
-    "haraj": {
-      "status": "ONLINE",
-      "response_time": 0.719
+      "response_time": 0.249
     },
     "stc_bank": {
       "status": "ONLINE",
-      "response_time": 2.019
+      "response_time": 3.031
     },
-    "jahez": {
+    "moe": {
       "status": "ONLINE",
-      "response_time": 0.446
+      "response_time": 3.107
     },
-    "absher": {
-      "status": "ONLINE",
-      "response_time": 2.39
-    },
-    "zain": {
-      "status": "ONLINE",
-      "response_time": 0.352
-    },
-    "nahdi": {
-      "status": "ONLINE",
-      "response_time": 0.827
-    },
-    "x": {
-      "status": "ONLINE",
-      "response_time": 0.163
-    },
-    "youtube": {
-      "status": "ONLINE",
-      "response_time": 0.265
-    },
-    "najiz": {
-      "status": "ONLINE",
-      "response_time": 2.746
-    },
-    "google_sa": {
+    "jarir": {
       "status": "ONLINE",
       "response_time": 0.385
     },
-    "whatsapp": {
+    "amazon_sa": {
       "status": "ONLINE",
-      "response_time": 0.285
+      "response_time": 2.289
     },
-    "linkedin": {
+    "hungerstation": {
       "status": "ONLINE",
-      "response_time": 0.207
-    },
-    "careem": {
-      "status": "ONLINE",
-      "response_time": 1.07
-    },
-    "stc": {
-      "status": "ONLINE",
-      "response_time": 1.107
+      "response_time": 0.147
     },
     "snb": {
       "status": "ONLINE",
-      "response_time": 3.387
+      "response_time": 3.75
     },
-    "mobily": {
+    "haraj": {
       "status": "ONLINE",
-      "response_time": 2.435
+      "response_time": 1.307
     },
-    "noon": {
+    "jahez": {
+      "status": "ONLINE",
+      "response_time": 1.019
+    },
+    "absher": {
+      "status": "ONLINE",
+      "response_time": 4.483
+    },
+    "nahdi": {
+      "status": "ONLINE",
+      "response_time": 1.607
+    },
+    "google_sa": {
+      "status": "ONLINE",
+      "response_time": 0.579
+    },
+    "youtube": {
+      "status": "ONLINE",
+      "response_time": 0.257
+    },
+    "zain": {
+      "status": "ONLINE",
+      "response_time": 1.055
+    },
+    "stc": {
+      "status": "ONLINE",
+      "response_time": 1.809
+    },
+    "linkedin": {
+      "status": "ONLINE",
+      "response_time": 0.712
+    },
+    "whatsapp": {
+      "status": "ONLINE",
+      "response_time": 0.783
+    },
+    "x": {
+      "status": "ONLINE",
+      "response_time": 1.066
+    },
+    "careem": {
+      "status": "ONLINE",
+      "response_time": 2.739
+    },
+    "alrajhi": {
       "status": "OFFLINE",
       "response_time": null
     },
     "nafath": {
+      "status": "OFFLINE",
+      "response_time": null
+    },
+    "najiz": {
+      "status": "OFFLINE",
+      "response_time": null
+    },
+    "mobily": {
       "status": "OFFLINE",
       "response_time": null
     }
