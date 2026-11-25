@@ -1,114 +1,114 @@
 {
-  "timestamp": "2026-11-25T04:34:59.245618+00:00",
+  "timestamp": "2026-11-25T14:56:56.297292+00:00",
   "total_platforms": 29,
   "platforms": {
-    "tamara": {
-      "status": "ONLINE",
-      "response_time": 0.269
-    },
     "gov_sa": {
       "status": "ONLINE",
-      "response_time": 0.393
+      "response_time": 0.045
+    },
+    "tamara": {
+      "status": "ONLINE",
+      "response_time": 0.112
     },
     "salla": {
       "status": "ONLINE",
-      "response_time": 0.083
+      "response_time": 0.058
     },
     "tabby": {
       "status": "ONLINE",
-      "response_time": 0.715
-    },
-    "moe": {
-      "status": "ONLINE",
-      "response_time": 1.32
+      "response_time": 0.751
     },
     "zid": {
       "status": "ONLINE",
-      "response_time": 0.992
-    },
-    "amazon_sa": {
-      "status": "ONLINE",
-      "response_time": 0.579
+      "response_time": 0.761
     },
     "tawakkalna": {
       "status": "ONLINE",
-      "response_time": 1.68
+      "response_time": 1.142
     },
-    "jarir": {
+    "amazon_sa": {
       "status": "ONLINE",
-      "response_time": 0.342
-    },
-    "alrajhi": {
-      "status": "ONLINE",
-      "response_time": 1.919
-    },
-    "jahez": {
-      "status": "ONLINE",
-      "response_time": 0.088
-    },
-    "hungerstation": {
-      "status": "ONLINE",
-      "response_time": 0.092
-    },
-    "stc_bank": {
-      "status": "ONLINE",
-      "response_time": 2.205
-    },
-    "absher": {
-      "status": "ONLINE",
-      "response_time": 2.479
-    },
-    "nahdi": {
-      "status": "ONLINE",
-      "response_time": 0.83
-    },
-    "haraj": {
-      "status": "ONLINE",
-      "response_time": 1.112
-    },
-    "zain": {
-      "status": "ONLINE",
-      "response_time": 0.421
-    },
-    "google_sa": {
-      "status": "ONLINE",
-      "response_time": 0.448
-    },
-    "youtube": {
-      "status": "ONLINE",
-      "response_time": 0.446
-    },
-    "x": {
-      "status": "ONLINE",
-      "response_time": 0.169
-    },
-    "stc": {
-      "status": "ONLINE",
-      "response_time": 1.231
-    },
-    "linkedin": {
-      "status": "ONLINE",
-      "response_time": 0.249
+      "response_time": 0.538
     },
     "najiz": {
       "status": "ONLINE",
-      "response_time": 3.46
+      "response_time": 1.391
     },
-    "careem": {
+    "alrajhi": {
       "status": "ONLINE",
-      "response_time": 1.477
+      "response_time": 1.483
     },
-    "snb": {
+    "moe": {
       "status": "ONLINE",
-      "response_time": 3.507
+      "response_time": 1.488
+    },
+    "jahez": {
+      "status": "ONLINE",
+      "response_time": 0.057
+    },
+    "jarir": {
+      "status": "ONLINE",
+      "response_time": 0.217
+    },
+    "hungerstation": {
+      "status": "ONLINE",
+      "response_time": 0.068
+    },
+    "haraj": {
+      "status": "ONLINE",
+      "response_time": 0.469
+    },
+    "zain": {
+      "status": "ONLINE",
+      "response_time": 0.201
+    },
+    "absher": {
+      "status": "ONLINE",
+      "response_time": 1.884
+    },
+    "nahdi": {
+      "status": "ONLINE",
+      "response_time": 0.502
+    },
+    "x": {
+      "status": "ONLINE",
+      "response_time": 0.082
+    },
+    "youtube": {
+      "status": "ONLINE",
+      "response_time": 0.239
     },
     "whatsapp": {
       "status": "ONLINE",
-      "response_time": 0.584
+      "response_time": 0.303
+    },
+    "careem": {
+      "status": "ONLINE",
+      "response_time": 0.748
+    },
+    "google_sa": {
+      "status": "ONLINE",
+      "response_time": 0.491
+    },
+    "linkedin": {
+      "status": "ONLINE",
+      "response_time": 0.205
+    },
+    "snb": {
+      "status": "ONLINE",
+      "response_time": 2.472
+    },
+    "stc_bank": {
+      "status": "ONLINE",
+      "response_time": 2.526
+    },
+    "stc": {
+      "status": "ONLINE",
+      "response_time": 1.7
     },
     "mobily": {
       "status": "ONLINE",
-      "response_time": 2.476
+      "response_time": 2.245
     },
     "nafath": {
       "status": "OFFLINE",
